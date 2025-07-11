@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-color: #F5F4EE !important;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(245, 244, 238, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}

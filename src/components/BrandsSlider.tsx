@@ -4,19 +4,16 @@ const BrandsSlider = () => {
   ];
 
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Trusted by Leading Brands
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto uppercase" style={{ color: '#F4F3F0' }}>
             Join hundreds of companies that trust Pulse Marketing to amplify their digital presence
           </p>
         </div>
         
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll">
+          <div className="flex animate-scroll" style={{ '--scroll-duration': '30s' } as React.CSSProperties}>
             {[...brands, ...brands].map((brand, index) => (
               <div
                 key={index}

@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { FlowButton } from "@/components/ui/flow-button";
+import { Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/5">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iaHNsKDI1OSAxMDAlIDY1JSAvIDAuMSkiLz4KPHN2Zz4K')] opacity-50"></div>
-      
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Removed background and overlays for full white background */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
@@ -21,21 +19,17 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            We create powerful digital marketing strategies that amplify your brand's voice, 
-            drive engagement, and deliver measurable results that matter to your business.
+          <p
+            className="text-lg md:text-xl max-w-2xl mx-auto mb-6"
+            style={{ color: '#F4F3F0' }}
+          >
+            {/* hero description text */}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all">
-              Start Your Journey
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="px-8 py-3 text-lg">
-              <Play className="mr-2 h-5 w-5" />
-              Watch Our Story
-            </Button>
+          <div className="flex items-center justify-center gap-2 mt-6">
+            <FlowButton text="Get Started" />
+            <FlowButton text="Watch Our Story" />
           </div>
 
           {/* Stats */}
@@ -59,10 +53,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Floating elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-pulse delay-1000"></div>
     </section>
   );
 };
